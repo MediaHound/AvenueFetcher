@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = "JSON Fetching for Avenue"
   s.homepage         = "https://github.com/MediaHound/AvenueFetcher"
   s.license          = 'Apache'
-  s.author           = { "Dustin Bachrach" => "ahdustin@gmail.com" }
+  s.author           = { "Dustin Bachrach" => "dustin@mediahound.com" }
   s.source           = { :git => "https://github.com/MediaHound/AvenueFetcher.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
