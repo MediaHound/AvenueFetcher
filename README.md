@@ -24,8 +24,8 @@ Simply Subclass AVEFetcher, and impelment `+sharedFetcher`:
 
 @end
 ```
+
 ```objc
-```
 @implementation MYFetcher
 
 + (instancetype)sharedFetcher
