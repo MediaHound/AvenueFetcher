@@ -29,15 +29,15 @@ typedef id(^TransformBlock)(id);
     if ([action isEqualToString:@"GET"]) {
         return [[AVENetworkManager sharedManager] GET:path
                                           parameters:parameters
-                                        networkToken:networkToken
                                             priority:priority
+                                        networkToken:networkToken
                                               builder:self.builder].thenInBackground(transformBlock);
     }
     else if ([action isEqualToString:@"PUT"]) {
         return [[AVENetworkManager sharedManager] PUT:path
                                            parameters:parameters
+                                            priority:priority
                                          networkToken:networkToken
-                                             priority:priority
                                               builder:self.builder].thenInBackground(transformBlock);
     }
     else if ([action isEqualToString:@"POST"]) {
@@ -45,15 +45,15 @@ typedef id(^TransformBlock)(id);
             return [[AVENetworkManager sharedManager] POST:path
                                                 parameters:parameters
                                  constructingBodyWithBlock:bodyBlock
-                                              networkToken:networkToken
                                                   priority:priority
+                                              networkToken:networkToken
                                                    builder:self.builder].thenInBackground(transformBlock);
         }
         else {
             return [[AVENetworkManager sharedManager] POST:path
                                                 parameters:parameters
-                                              networkToken:networkToken
                                                   priority:priority
+                                              networkToken:networkToken
                                                    builder:self.builder].thenInBackground(transformBlock);
         }
     }
