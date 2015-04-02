@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Source/*.{h,m}'
 
-  s.dependency 'AtSugar'
   s.dependency 'Avenue'
   s.dependency 'JSONModel'
   s.dependency 'PromiseKit'

@@ -7,7 +7,6 @@
 
 #import "AVEFetcher.h"
 
-#import <AtSugar/AtSugar.h>
 #import <JSONModel/JSONModel.h>
 
 
@@ -16,7 +15,11 @@ typedef id(^TransformBlock)(id);
 
 @implementation AVEFetcher
 
-@singleton(sharedFetcher)
++ (instancetype)sharedFetcher
+{
+    // Subclasses should implement this.
+    return nil;
+}
 
 - (PMKPromise*)fetchWithAction:(NSString*)action
                           path:(NSString*)path
