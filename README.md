@@ -71,6 +71,24 @@ Making requests with the fetcher is simple:
 });
 ```
 
+You can also make `POST` and `PUT` requests and treat the returned response as a model.
+
+```objc
+[[MYFetcher sharedFetcher] postAndFetchModel:MYModel.class
+                                        path:@"model/1"
+                                     keyPath:nil
+                                  parameters:parameters].then(^(MYModel* model) {
+    // Use the `model`.
+});
+
+[[MYFetcher sharedFetcher] putAndFetchModel:MYModel.class
+                                       path:@"model/1"
+                                    keyPath:nil
+                                 parameters:parameters].then(^(MYModel* model) {
+    // Use the `model`.
+});
+```
+
 ## Author
 
 MediaHound
