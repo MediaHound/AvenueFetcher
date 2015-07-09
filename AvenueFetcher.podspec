@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Source/*.{h,m}'
 
-  s.dependency 'Avenue'
+  s.dependency 'Avenue', '~> 0.1'
   s.dependency 'JSONModel', '~> 1.1'
   s.dependency 'PromiseKit', '~> 1.5'
 end

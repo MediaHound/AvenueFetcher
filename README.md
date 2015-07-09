@@ -13,7 +13,7 @@ AvenueFetcher is a simple component that builds on [Avenue](https://github.com/m
 AvenueFetcher is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod "AvenueFetcher", :git => "https://github.com/MediaHound/AvenueFetcher.git"
+    pod "AvenueFetcher"
 
 ## Setup
 
