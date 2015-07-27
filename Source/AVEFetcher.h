@@ -46,7 +46,7 @@
  * @discussion If the model is derived from a sub property in the JSON,
  *   you can pass a `keyPath` to specify where the model should be read from.
  */
-- (PMKPromise*)fetchModel:(Class)modelClass
+- (AnyPromise*)fetchModel:(Class)modelClass
                      path:(NSString*)path
                   keyPath:(NSString*)keyPath
                parameters:(NSDictionary*)parameters
@@ -68,7 +68,7 @@
  * @discussion If the model is derived from a sub property in the JSON,
  *   you can pass a `keyPath` to specify where the model should be read from.
  */
-- (PMKPromise*)putAndFetchModel:(Class)modelClass
+- (AnyPromise*)putAndFetchModel:(Class)modelClass
                            path:(NSString*)path
                         keyPath:(NSString*)keyPath
                      parameters:(NSDictionary*)parameters;
@@ -88,7 +88,7 @@
  * @discussion If the model is derived from a sub property in the JSON,
  *   you can pass a `keyPath` to specify where the model should be read from.
  */
-- (PMKPromise*)postAndFetchModel:(Class)modelClass
+- (AnyPromise*)postAndFetchModel:(Class)modelClass
                             path:(NSString*)path
                          keyPath:(NSString*)keyPath
                       parameters:(NSDictionary*)parameters;
@@ -108,7 +108,7 @@
  * @discussion If the model is derived from a sub property in the JSON,
  *   you can pass a `keyPath` to specify where the model should be read from.
  */
-- (PMKPromise*)postAndFetchModel:(Class)modelClass
+- (AnyPromise*)postAndFetchModel:(Class)modelClass
                             path:(NSString*)path
                          keyPath:(NSString*)keyPath
                       parameters:(NSDictionary*)parameters

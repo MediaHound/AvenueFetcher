@@ -21,7 +21,7 @@ typedef id(^TransformBlock)(id);
     return nil;
 }
 
-- (PMKPromise*)fetchWithAction:(NSString*)action
+- (AnyPromise*)fetchWithAction:(NSString*)action
                           path:(NSString*)path
                     parameters:(NSDictionary*)parameters
      constructingBodyWithBlock:(void (^)(id<AFMultipartFormData> formData))bodyBlock
@@ -84,7 +84,7 @@ typedef id(^TransformBlock)(id);
     };
 }
 
-- (PMKPromise*)fetchModel:(Class)modelClass
+- (AnyPromise*)fetchModel:(Class)modelClass
                      path:(NSString*)path
                   keyPath:(NSString*)keyPath
                parameters:(NSDictionary*)parameters
@@ -100,7 +100,7 @@ typedef id(^TransformBlock)(id);
                   transformBlock:[self transformBlockForModel:modelClass keyPath:keyPath]];
 }
 
-- (PMKPromise*)putAndFetchModel:(Class)modelClass
+- (AnyPromise*)putAndFetchModel:(Class)modelClass
                            path:(NSString*)path
                         keyPath:(NSString*)keyPath
                      parameters:(NSDictionary*)parameters
@@ -115,7 +115,7 @@ typedef id(^TransformBlock)(id);
             transformBlock:[self transformBlockForModel:modelClass keyPath:keyPath]];
 }
 
-- (PMKPromise*)postAndFetchModel:(Class)modelClass
+- (AnyPromise*)postAndFetchModel:(Class)modelClass
                             path:(NSString*)path
                          keyPath:(NSString*)keyPath
                       parameters:(NSDictionary*)parameters
@@ -130,7 +130,7 @@ typedef id(^TransformBlock)(id);
                   transformBlock:[self transformBlockForModel:modelClass keyPath:keyPath]];
 }
 
-- (PMKPromise*)postAndFetchModel:(Class)modelClass
+- (AnyPromise*)postAndFetchModel:(Class)modelClass
                             path:(NSString*)path
                          keyPath:(NSString*)keyPath
                       parameters:(NSDictionary*)parameters
