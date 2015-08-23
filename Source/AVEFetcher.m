@@ -109,8 +109,7 @@ typedef id(^TransformBlock)(id);
                             path:path
                       parameters:parameters
        constructingBodyWithBlock:nil
-                        priority:[AVENetworkPriority priorityWithLevel:AVENetworkPriorityLevelHigh
-                                                          postponeable:NO]
+                        priority:nil
                     networkToken:nil
             transformBlock:[self transformBlockForModel:modelClass keyPath:keyPath]];
 }
@@ -124,8 +123,7 @@ typedef id(^TransformBlock)(id);
                             path:path
                       parameters:parameters
        constructingBodyWithBlock:nil
-                        priority:[AVENetworkPriority priorityWithLevel:AVENetworkPriorityLevelHigh
-                                                          postponeable:NO]
+                        priority:nil
                     networkToken:nil
                   transformBlock:[self transformBlockForModel:modelClass keyPath:keyPath]];
 }
@@ -140,8 +138,7 @@ typedef id(^TransformBlock)(id);
                             path:path
                       parameters:parameters
        constructingBodyWithBlock:bodyBlock
-                        priority:[AVENetworkPriority priorityWithLevel:AVENetworkPriorityLevelHigh
-                                                          postponeable:NO]
+                        priority:nil
                     networkToken:nil
                   transformBlock:[self transformBlockForModel:modelClass keyPath:keyPath]];
 }

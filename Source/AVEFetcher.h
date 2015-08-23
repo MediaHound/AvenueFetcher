@@ -8,6 +8,8 @@
 #import <PromiseKit/PromiseKit.h>
 #import <Avenue/Avenue.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 
 /***
  * The AvenueFetcher is intended to be subclassed.
@@ -48,10 +50,10 @@
  */
 - (AnyPromise*)fetchModel:(Class)modelClass
                      path:(NSString*)path
-                  keyPath:(NSString*)keyPath
-               parameters:(NSDictionary*)parameters
-                 priority:(AVENetworkPriority*)priority
-             networkToken:(AVENetworkToken*)networkToken;
+                  keyPath:(nullable NSString*)keyPath
+               parameters:(nullable NSDictionary*)parameters
+                 priority:(nullable AVENetworkPriority*)priority
+             networkToken:(nullable AVENetworkToken*)networkToken;
 
 /***
  * Performs a HTTP PUT operation and treats the
@@ -62,16 +64,14 @@
  * @param path The relative path (from the BaseURL) to the HTTP resource.
  * @param keyPath The respone sub-property keyPath to derive the model
  * @param parameters The network request parameters
- * @param priority The Avenue network priority
- * @param networkToken The Avenue network token
  *
  * @discussion If the model is derived from a sub property in the JSON,
  *   you can pass a `keyPath` to specify where the model should be read from.
  */
 - (AnyPromise*)putAndFetchModel:(Class)modelClass
                            path:(NSString*)path
-                        keyPath:(NSString*)keyPath
-                     parameters:(NSDictionary*)parameters;
+                        keyPath:(nullable NSString*)keyPath
+                     parameters:(nullable NSDictionary*)parameters;
 
 /***
  * Performs a HTTP POST operation and treats the
@@ -82,16 +82,14 @@
  * @param path The relative path (from the BaseURL) to the HTTP resource.
  * @param keyPath The respone sub-property keyPath to derive the model
  * @param parameters The network request parameters
- * @param priority The Avenue network priority
- * @param networkToken The Avenue network token
  *
  * @discussion If the model is derived from a sub property in the JSON,
  *   you can pass a `keyPath` to specify where the model should be read from.
  */
 - (AnyPromise*)postAndFetchModel:(Class)modelClass
                             path:(NSString*)path
-                         keyPath:(NSString*)keyPath
-                      parameters:(NSDictionary*)parameters;
+                         keyPath:(nullable NSString*)keyPath
+                      parameters:(nullable NSDictionary*)parameters;
 
 /***
  * Performs a HTTP POST with Body Block operation and treats the
@@ -110,8 +108,10 @@
  */
 - (AnyPromise*)postAndFetchModel:(Class)modelClass
                             path:(NSString*)path
-                         keyPath:(NSString*)keyPath
-                      parameters:(NSDictionary*)parameters
+                         keyPath:(nullable NSString*)keyPath
+                      parameters:(nullable NSDictionary*)parameters
        constructingBodyWithBlock:(void (^)(id<AFMultipartFormData> formData))bodyBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END
