@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "AvenueFetcher"
-  s.version          = "0.3.0"
+  s.version          = "0.3.1"
   s.summary          = "JSON Fetching for Avenue"
   s.homepage         = "https://github.com/MediaHound/AvenueFetcher"
   s.license          = 'Apache'
@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'Avenue', '~> 0.3'
   s.dependency 'JSONModel', '~> 1.1'
-  s.dependency 'PromiseKit/CorePromise', '~> 2.0'
+  s.dependency 'PromiseKit/CorePromise'
 end
